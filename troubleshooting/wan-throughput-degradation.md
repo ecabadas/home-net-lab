@@ -8,6 +8,10 @@
 
 After cutting over to a Ubiquiti Cloud Gateway Max, wired downloads collapsed whenever the WAN port was left on auto-negotiation. The link trained at 2.5 GbE without issue - negotiation was succeeding, but the gateway was not forwarding at anything close to line rate. Two weeks of structured testing isolated the problem to the gateway's 2.5G forwarding path, and Ubiquiti's dev team used my test data to prescribe a fix that restored full throughput.
 
+## Method
+
+I worked the problem bottom-up through the OSI model: Layer 1 first (cables, ports, in-wall runs, then the modem itself via the direct bypass test), then Layer 2 (the link negotiated cleanly at 2.5 GbE, so the problem was not there), which left the forwarding path above it. Each layer got ruled out with a test before moving up.
+
 ## Confirmed Observations
 
 - Gateway: Ubiquiti Cloud Gateway Max, base model (no storage)

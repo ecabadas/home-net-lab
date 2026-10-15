@@ -54,6 +54,7 @@ The fix involves runtime commands that do not survive a reboot, so I reapply the
 - When two measurement tools disagree, the disagreement itself is evidence - don't average them away.
 - A workaround is an observed result, not a root cause. Don't confuse the two.
 - Vendors move faster when you hand them structured data and a clear question instead of a complaint.
+- Decommission old gear completely before cutover. A still-powered old gateway means duplicate SSIDs and a rogue DHCP server, and you will chase ghosts.
 
 ## What's Next
 

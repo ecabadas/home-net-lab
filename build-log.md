@@ -10,6 +10,10 @@
 | Oct 12, 2026 | Ubiquiti's dev team reviewed my test data and prescribed a fix: update to UniFi OS 6.0.12 Early Access plus targeted runtime commands. |
 | Oct 13, 2026 | Applied the prescription in a maintenance window. Verified: ~950 Mbps down on Speedtest.net, ~855-865 on LibreSpeed, WAN back on auto-negotiation. Decided to keep the gateway. Fix is runtime-only (reapplied after reboots); waiting on a permanent fix from Ubiquiti. |
 
+### Cutover-day lesson: unplug the old gear
+
+On cutover day I forgot to unplug the old XFi gateway when the new equipment came online. I had mirrored the old SSID and password onto the new system, but devices would not reliably join - I even tweaked the SSID thinking that was the problem. The actual problem: the old gateway was still powered on, still broadcasting the same SSID, and still running DHCP. Clients were associating to the wrong access point and pulling conflicting leases from two DHCP servers. The moment I unplugged the old gateway, every device joined the new equipment immediately. Lesson: fully decommission old gear before cutover - powered on is still on the network.
+
 ## Physical Layer (self-installed)
 
 All of the physical plant was done by hand:
