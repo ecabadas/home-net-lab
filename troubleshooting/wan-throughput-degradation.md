@@ -30,6 +30,7 @@ Every test was run on the same computer against the same test servers, changing 
 | Bad LAN port | Two different gateway LAN ports, identical collapse | Ruled out |
 | In-wall wiring | Direct short cable vs. in-wall office run, identical collapse | Ruled out |
 | Test machine | All runs on the same computer | Ruled out |
+| Modem or ISP | Bypassed the gateway entirely: ran Ethernet straight from the modem into a computer and got full proper speeds | Ruled out |
 | Negotiation failure | Dashboard showed the link training at 2.5 GbE | Ruled out - the link came up fine |
 | Firmware regression | Issue predated the 6.0.11 update done at support's request | Ruled out |
 

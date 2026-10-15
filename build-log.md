@@ -10,6 +10,18 @@
 | Oct 12, 2026 | Ubiquiti's dev team reviewed my test data and prescribed a fix: update to UniFi OS 6.0.12 Early Access plus targeted runtime commands. |
 | Oct 13, 2026 | Applied the prescription in a maintenance window. Verified: ~950 Mbps down on Speedtest.net, ~855-865 on LibreSpeed, WAN back on auto-negotiation. Decided to keep the gateway. Fix is runtime-only (reapplied after reboots); waiting on a permanent fix from Ubiquiti. |
 
+## Physical Layer (self-installed)
+
+All of the physical plant was done by hand:
+
+- Re-ran the coax feed myself: fished, terminated, and tested to proper code and practices
+- Installed a new electrical outlet receptacle for the network closet myself, after consulting a professional electrician (my father)
+- Ran Ethernet to the office: installed a two-port keystone jack and terminated both runs myself
+- Ran Ethernet to the living room for the main TV, terminated myself
+- Rerouted the existing Ethernet run for the home DVR into the new closet placement
+- Built my own patch and testing cables
+- Cut a proper closet entry: through the wall beam, into the wall, out through a brush panel
+
 ## Current State
 
 - Gateway stable on the dev-team fix, monitoring ongoing

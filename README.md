@@ -33,7 +33,7 @@ Full troubleshooting write-up: [troubleshooting/wan-throughput-degradation.md](t
 ## How I Worked the Problem
 
 1. **Isolated the variable.** A/B tested WAN auto-negotiation vs. forced 1 Gbps with everything else held constant.
-2. **Ruled out the obvious, with evidence.** Two different Ethernet cables, two different LAN ports, the in-wall run, and the test machine itself - every test run on the same computer, same servers. All ruled out.
+2. **Ruled out the obvious, with evidence.** Bypassed the gateway and tested straight off the modem (full speeds - modem and ISP cleared), then two different Ethernet cables, two different LAN ports, the in-wall run, and the test machine itself - every test run on the same computer, same servers. All ruled out.
 3. **Read the anomalies.** Two speed-test tools disagreed with each other by 4x under the same condition, which pointed at a per-flow forwarding problem rather than a link-speed ceiling. Wireless on the same machine outperformed wired, which pointed at the path, not the WAN link.
 4. **Did the research.** Found corroborating cases across ISPs and modem brands, all converging on the same workaround. Posted my own findings and data for the community.
 5. **Worked the vendor ticket properly.** Opened Ubiquiti support ticket #6043461 with structured test data, controlled benchmarks, and specific diagnostic questions instead of "internet slow, please help."
